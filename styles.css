@@ -1,13 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio entre la imagen y el texto */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  left: 2rem;
 }
-
 .logo-img {
     height: 50px; /* Ajusta el tamaño según tu diseño */
     width: auto;
+    border-radius: 20px; /* Bordes redondeados para la imagen */
 }
 
 .logo-text {
@@ -16,15 +23,15 @@
     letter-spacing: 1px;
 }
 
+
 /* Estilos Generales */
 body {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    line-height: 1.6;
     background: linear-gradient(135deg, #1a1a2e, #16213e);
+    line-height: 1.6;
     scroll-behavior: smooth;
-}
+  }
 
 /* Estilos de enlaces y listas */
 a {
@@ -41,20 +48,49 @@ ul {
 
 /* Encabezado */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 1000;
-    color: white;
+    width: 100%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
     transition: background 0.3s ease-in-out;
-}
+    z-index: 1000;
+  }
 
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+     justify-content: space-evenly;
+  }
+  
+
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav .nav-links a {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  nav .nav-links a:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+  }
+  
+ 
+  .btn-hablemos:hover {
+    background: #fff;
+    color: #16213e; /* tu fondo oscuro */
+  }
+
+
+  
 header.scrolled {
     background: rgba(255, 255, 255, 0.3);
 }
@@ -95,24 +131,20 @@ nav a:hover {
     background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
 }
 
-.hero-content {
-    max-width: 650px;
-}
-
+.hero-content { max-width: 650px; }
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.8;
-}
-
+  }
+  
 .cta-button {
     display: inline-block;
     background: #ff6600;
@@ -137,64 +169,131 @@ section {
 }
 
 /* Sección Sobre Nosotros */
+ 
+
+/* Sección Sobre Nosotros */
 .about {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);       /* igual que .project-item */
     backdrop-filter: blur(10px);
     border-radius: 16px;
-    padding: 3rem;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Sección Proyectos */
-.projects {
-    text-align: center;
-}
-
-.project-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     padding: 2rem;
-    border-radius: 16px;
-    margin: 1.5rem auto;
-    max-width: 600px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
+    max-width: 900px;                           /* mismo ancho máximo que proyectos */
+    margin: 1.5rem auto;                        /* centrado y separación vertical */
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-}
-
-.stepvital-logo {
-    display: block;
-    margin: 0 auto 15px; /* Centrado y con margen inferior */
-    width: 120px; /* Ajusta según sea necesario */
-    height: auto;
-}
-
-/* Ajuste de la imagen de la app StepVital */
-.stepvital-img {
-    display: block;
-    max-width: 80%; /* Se adapta al tamaño del contenedor */
-    height: auto;
-    margin: 15px auto 0; /* Centrado con margen superior */
-    border-radius: 10px; /* Bordes redondeados para mejor apariencia */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Sombra ligera */
-}
-
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .about-text {
+    max-width: 600px;                           /* fuerza el párrafo a 3 líneas aprox. */
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+  }
+  
+ 
 
 /* Sección Contacto */
 .contact {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    color: #fff;
+ 
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
     text-align: center;
-}
-
-form {
+    margin-bottom: 2rem;
+  }
+  
+  /* Contenedor flexible */
+  .contact-container {
+    display: block;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+  
+  /* Estilos del formulario */
+  .contact-form {
+    flex: 1 1 350px;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-}
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    outline: none;
+  }
+  
+
+  /* Bloque de info adicional */
+.contact-info {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+  }
+  
+  .email-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ff6600;
+    transition: color 0.3s;
+  }
+  
+  .email-link:hover {
+    color: #cc5200;
+  }
+
+  
+  
 
 label {
     text-align: left;
@@ -238,10 +337,199 @@ button:hover {
 
 /* Pie de Página */
 footer {
-    text-align: center;
+    text-align: right;
     padding: 1.2rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
+
+
+
+/* Sección Proyectos */
+.projects {
+    text-align: center;
+}
+
+.project-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+
+/* Proyectos */
+.projects {
+    text-align: center;
+  }
+  .projects-subtitle {
+    color: rgba(255,255,255,0.75);
+    margin: 0.5rem 0 2rem;
+    font-size: 1.1rem;
+  }
+  .project-item {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 1.5rem auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+  }
+  /* Imagen: margenes y tamaño */
+  .project-image {
+    flex:  200px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+  }
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  /* Detalles */
+  .project-details {
+    flex: 1 1 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .project-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .project-details h3 {
+    margin: 0;
+    color: #fff;
+  }
+  .project-details p {
+    margin-top: 1rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+    text-align: justify;
+
+  }
+
+  /* Lista de características */
+.project-features {
+    list-style: disc inside;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    line-height: 1.4;
+  }
+
+/* Badge de Google Play */
+.play-store-badge {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+  .play-store-badge img {
+    width: 160px; /* ajusta al tamaño que prefieras */
+    height: auto;
+  }
+  
+  /* Fecha de última actualización */
+  .project-update {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.8rem;
+  }  
+/* --- Media Queries --- */
+
+/* Móviles (hasta 600px) */
+@media (max-width: 600px) {
+    .header-container {
+      padding: 1rem;
+    }
+    .logo-img { height: 40px; }
+    .logo-text { font-size: 1.4rem; }
+    .nav-links {
+      display: none; /* ocultar menú horizontal */
+    }
+    /* OPCIONAL: podrías añadir aquí un botón de menú hamburguesa */
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+    section { padding: 3rem 5%; }
+    .about h2,
+    .contact h2 { font-size: 2rem; }
+  }
+  
+  /* Tablets (hasta 1024px) */
+  @media (max-width: 1024px) {
+    .header-container {
+      padding: 2rem 1.5rem;
+    }
+    .logo-img { height: 45px; }
+    .logo-text { font-size: 1.6rem; }
+    .nav-links a { padding: 0.5rem 0.8rem; font-size: 0.9rem; }
+    section { padding: 4rem 8%; }
+  }
+  
+  /* Pantallas muy grandes */
+  @media (min-width: 1600px) {
+    .header-container {
+      max-width: 1400px;
+      padding: 1rem 3rem;
+    }
+    section { padding: 6rem 12%; }
+  }
+
+  /* Móviles (hasta 600px): ocultar menú de navegación */
+@media (max-width: 600px) {
+    nav .nav-links {
+      display: none !important;
+    }
+  }
+
+  /* Tablets y móviles (hasta 1024px): ocultar menú de navegación */
+@media (max-width: 1024px) {
+    nav .nav-links {
+      display: none !important;
+    }
+  }
+  /* Ocultar la sección de imagen de proyecto en móviles (≤600px) */
+@media (max-width: 600px) {
+    .project-image {
+      display: none !important;
+    }
+  }
+  
+  /* Ocultar la sección de imagen de proyecto en tablets (≤1024px) */
+  @media (max-width: 1024px) {
+    .project-image {
+      display: none !important;
+    }
+  }
+  
