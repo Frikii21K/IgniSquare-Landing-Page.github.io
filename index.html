@@ -1,77 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IgniSquare - Innovación y Desarrollo</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IgniSquare - Innovación y Desarrollo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Encabezado -->
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo de IgniSquare" class="logo-img">
-            <div class="logo-text">IgniSquare</div>
+  <!-- Encabezado -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="logo.png" alt="Logo de IgniSquare" class="logo-img">
+        <span class="logo-text">IgniSquare</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+     </div>
+  </header>
+
+  
+  <!-- Sección Principal -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Innovación y Desarrollo Tecnológico</h1>
+      <p>En IgniSquare, impulsamos el futuro con soluciones tecnológicas avanzadas que mejoran la vida de las personas.</p>
+      <a href="#proyectos" class="cta-button">Explorar Proyectos</a>
+    </div>
+  </section>
+
+<!-- Sobre Nosotros -->
+<section id="sobre-nosotros" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p class="about-text">
+      Somos un equipo apasionado por la tecnología que desarrolla software innovador para mejorar la calidad de vida de nuestros usuarios.  
+      Nuestra misión es ofrecer soluciones digitales intuitivas, seguras y de alto impacto.
+    </p>
+  </section>
+  
+ 
+
+ <!-- Sección Proyectos -->
+<section id="proyectos" class="projects">
+    <h2>Nuestros Proyectos</h2>
+    <p class="projects-subtitle">Descubre las soluciones innovadoras que hemos creado.</p>
+  
+    <div class="project-item">
+      <!-- Imagen de la app -->
+      <div class="project-image">
+        <img src="stepx.png" alt="Vista previa de StepVital">
+      </div>
+      <!-- Detalles de la app -->
+      <div class="project-details">
+        <div class="project-header">
+          <img src="stepvital.png" alt="Logo de StepVital" class="project-logo">
+          <h3>StepVital – Step Counter</h3>
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <p>
+          StepVital es tu podómetro gratuito, contador de pasos y calorías. 
+          Registra tus pasos, calorías quemadas, distancia recorrida y tiempo de ejercicio. 
+          Visualiza tu progreso con gráficas diarias y mensuales, utiliza widgets en tu pantalla de inicio 
+          y participa en desafíos semanales para mantenerte motivado.
+        </p>
+        <ul class="project-features">
+          <li>Seguimiento integral: pasos, distancia, calorías y tiempo de actividad.</li>
+          <li>Widgets personalizables en pantalla de inicio.</li>
+          <li>Gráficas diarias y mensuales para identificar tus días más activos.</li>
+          <li>Artículos de salud y bienestar integrados.</li>
+          <li>Desafíos semanales y mini-juegos motivacionales.</li>
+          <li>Temas y colores personalizables.</li>
+          <li>Funciones premium: sin anuncios, temas extra y suscripción opcional.</li>
+        </ul>
+        <!-- Badge de Google Play -->
+        <a href="https://play.google.com/store/apps/details?id=com.ignisquare.stepvital"
+           target="_blank" rel="noopener" class="play-store-badge">
+          <img src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png"
+               alt="Disponible en Google Play">
+        </a>
+        <p class="project-update">Última actualización: 15 de julio de 2025.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
 
-    <!-- Sección Principal -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Innovación y Desarrollo Tecnológico</h1>
-            <p>En IgniSquare, impulsamos el futuro con soluciones tecnológicas avanzadas que mejoran la vida de las personas.</p>
-            <a href="#proyectos" class="cta-button">Explorar Proyectos</a>
+<!-- Contacto -->
+<section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <div class="contact-container">
+      <!-- Formulario -->
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
         </div>
-    </section>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+      </form>
+  
+      <!-- Información de contacto debajo -->
+      <div class="contact-info">
+        <p>¿Prefieres enviarnos un email directamente? <a href="mailto:ignisquare@gmail.com" class="email-link">ignisquare@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+  
 
-    <!-- Sobre Nosotros -->
-    <section id="sobre-nosotros" class="about">
-        <h2>Sobre Nosotros</h2>
-        <p>Somos un equipo de apasionados por la tecnología que desarrolla software innovador para mejorar la calidad de vida de nuestros usuarios. Nuestra misión es ofrecer soluciones digitales intuitivas, seguras y de alto impacto.</p>
-    </section>
 
-    <!-- Proyectos -->
-    <section id="proyectos" class="projects">
-        <h2>Nuestros Proyectos</h2>
-        <div class="project-item">
-            <h3>StepVital</h3>
-            <img src="stepvital.png" alt="StepVital Logo" class="stepvital-logo">
-            <p>StepVital es una aplicación para Android que te ayuda a monitorear tu actividad física. Registra tus pasos, distancia, calorías quemadas y tiempo de ejercicio para mejorar tu bienestar.</p>
-         </div>
-    </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <h2>Contacto</h2>
-        <form id="contact-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-        <p>También puedes escribirnos a <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a></p>
-    </section>
-
-    <!-- Pie de Página -->
-    <footer>
-        <p>© 2025 IgniSquare. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Pie de Página -->
+  <footer>
+    <p>© 2025 IgniSquare. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
